@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alkaline Systems</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <h1>Hello World</h1>
-    <h3>Ain't got shit yet.</h3>
+<body onclick="handleClick()">
+    <main>
+        <div class="container">
+            <p class="message">
+                Looking awfully quiet around here...<br />
+                Surely something will happen soon...
+            </p>
+            <p id="quit-prying" class="hidden">
+                Still nothing ¯\_(ツ)_/¯
+            </p>
+        </div>
+    </main>
+    <script>
+        let clickCount = 0;
+        function handleClick() {
+            clickCount += 1;
+            if (clickCount >= 10) {
+                document.getElementById('quit-prying').classList.add('visible');
+            }
+        }
+    </script>
 </body>
 </html>
